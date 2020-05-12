@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Валерия Сергеевна Поспелова](https://up.htmlacademy.ru/htmlcss/28/user/1421583).
-* Наставник: `Константин Антонов`(https://htmlacademy.ru/profile/rawle51).
+* Наставник: [Константин Антонов](https://htmlacademy.ru/profile/rawle51).
 
 ---
 
