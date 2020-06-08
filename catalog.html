@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="normalize.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
@@ -13,19 +13,13 @@
         <a class="main-logo"><img src="img/logo.svg" width="154" height="64" alt="Логотип «Gllacy shop»"></a>
         <ul class="main-menu">
           <li><a class="menu-1" href="catalog.html">Каталог</a></li>
-          <form class="visually-hidden" action="https://echo.htmlacademy.ru/courses" method="post" >
-            <fieldset>
-              <legend class="visually-hidden">Каталог</legend>
-              <label class="visually-hidden" for="catalog">Каталог</label>
-                  <select id="catalog">
-                    <option value="c1">Новинки</option>
-                    <option value="c2">Сливочное</option>
-                    <option value="c3"checked>Щербеты</option>
-                    <option value="c4">Фруктовый лед</option>
-                    <option value="c5">Мелорин</option>
-                  </select>
-             </fieldset>
-          </form>
+              <ul class="visually-hidden menu-list">
+                <li>Новинки</li>
+                <li>Сливочное</li>
+                <li>Щербеты</option>
+                <li>Фруктовый лед</li>
+                <li>Мелорин</li>
+              </ul>
           <li><a class="menu-2" href="blank.html">Доставка и оплата</a></li>
           <li><a class="menu-3" href="blank.html">О компании</a></li>
         </ul>
@@ -33,16 +27,11 @@
       <div class="user-navigation">
         <a class="loupe" href="blank.html">Поиск</a>
         <form class="visually-hidden" action="https://echo.htmlacademy.ru/courses" method="post" >
-          <fieldset>
-            <legend class="visually-hidden">Форма поиска</legend>
             <label class="visually-hidden" for="search">Поиск</label>
                 <input id="search" type="text" name="search" placeholder="Крем-брюле">
-          </fieldset>
         </form>
         <a class="entrance" href="blank.html">Вход</a>
         <form class="visually-hidden" action="https://echo.htmlacademy.ru/courses" method="post" >
-          <fieldset>
-            <legend  class="visually-hidden">Форма входа</legend>
               <p>
                 <label class="visually-hidden" for="login-login">Логин</label>
                 <input id="login-login" type="email" name="login" placeholder="email@example.com">
@@ -56,14 +45,8 @@
                 <a href="#"> Забыли пароль?</a>
                 <a href="#"> Новая регистрация</a>
               </p>
-          </fieldset>
         </form>
         <a class="basket" href="blank.html">Корзина</a>
-        <form class="visually-hidden" action="https://echo.htmlacademy.ru/courses" method="post" >
-          <fieldset>
-            <legend class="visually-hidden">Корзина</legend>
-          </fieldset>
-        </form>
       </div>
       <div class="work-time">
           <p> с 10 до 20, ежедневно </p>
@@ -74,7 +57,7 @@
       <h1 class="filters">Сливочное мороженое</h1>
       <form action="https://echo.htmlacademy.ru/courses" method="get" >
         <fieldset>
-        <legend class="visually-hidden">Фильтры</legend>
+          <legend>Сортировка</legend>
          <label class="sorting" for="sorting">Сортировка</label>
          <select id="sorting">
             <option value="s1" checked>По популярности</option>
@@ -82,37 +65,41 @@
             <option value="s3">Сначала дорогие</option>
             <option value="s4">По жирности</option>
           </select>
+        </fieldset>
           <label for="cost">Цена: 100 ₽ – 500 ₽</label>
           <input type="range" id="cost"  min="100" max="500" step="10"> <!--multiple???-->
-          <p>Жирность:</p>
-          <label>
-            <input type="radio"  value="j1"> 0
-          </label>
-          <label>
-            <input type="radio"  value="j2" checked> до 10%
-          </label>
-          <label>
-           <input type="radio"  value="j3"> до 30%
-          </label>
-          <label>
-           <input type="radio"  value="j4"> выше 30%
-          </label>
-          <p>Наполнители:</p>
-          <label>
-            <input type="radio"  value="t1" checked> шоколадные
-          </label>
-          <label>
-           <input type="radio"  value="t2" checked> сахарные присыпки
-          </label>
-          <label>
-            <input type="radio"  value="t3"> фрукты
-          </label>
-          <label>
-            <input type="radio"  value="t4"> сиропы
-          </label>
-          <label>
-           <input type="radio"  value="t5"> джемы
-          </label>
+       <fieldset>
+          <legend>Жирность:</legend>
+            <label>
+             <input type="radio"  value="j1"> 0
+           </label>
+           <label>
+              <input type="radio"  value="j2" checked> до 10%
+           </label>
+           <label>
+              <input type="radio"  value="j3"> до 30%
+            </label>
+           <label>
+              <input type="radio"  value="j4"> выше 30%
+           </label>
+       </fieldset>
+       <fieldset>
+         <legend>Наполнители:</legend>
+           <label>
+             <input type="radio"  value="t1" checked> шоколадные
+           </label>
+           <label>
+              <input type="radio"  value="t2" checked> сахарные присыпки
+           </label>
+           <label>
+              <input type="radio"  value="t3"> фрукты
+            </label>
+            <label>
+              <input type="radio"  value="t4"> сиропы
+            </label>
+            <label>
+              <input type="radio"  value="t5"> джемы
+            </label>
           <button type="submit" value="Применить">
         </fieldset>
       </form>  
@@ -189,7 +176,7 @@
           <li><a class="social" href="#"><img src="img/twitter.svg" width="32" height="32" alt="Твиттер"></a></li>
       </ul>
       <div>
-        <ul lass="info-container">
+        <ul class="info-container">
           <li><a class="heart" href="#">Для поставщиков</a></li>
           <li><a href="#">О производстве</a></li>
           <li><a href="#">Наши документы</a></li>

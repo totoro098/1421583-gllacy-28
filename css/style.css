@@ -23,9 +23,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-li{
-  list-style: none;
-}
 .page {
   height: 100%;
 }
@@ -58,14 +55,15 @@ li{
   line-height: 18px;  
   background-color: transparent;
 }
-.main-menu
-{
+.main-menu{
+  list-style: none;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 .main-menu li{
+  list-style: none;
   padding: 20px;
   font-family: Roboto;
   font-style: normal;
@@ -98,21 +96,6 @@ li{
   background-repeat: no-repeat;
   background-position: 0 0;
 }
-.sale{
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 35px;
-  line-height: 41px;
-  padding:16px;
-}
-.stock{
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 22px;
-}
 .basket::before {
   content: "";
   position: absolute;
@@ -123,6 +106,7 @@ li{
   background-position: 0 0;
 }
 .work-time{
+  color: #ffffff;
 }
 .hit-list{
   display: flex;
@@ -136,6 +120,9 @@ li{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  height: 307px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .hit-item p{
   font-weight: bold;
@@ -151,6 +138,7 @@ li{
 }
 .hit-item h3{
   font-size: 16px;
+  width: 267px;
   order: 2;
 }
 .goods-list{
@@ -166,22 +154,27 @@ li{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  height: 307px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .goods p{
   font-weight: bold;
   font-size: 45px;
+  z-index: 2;
 }
 .goods span{
   font-weight: bold;
   font-size: 30px;
 }
 .goods img{
-  margin: 26px;
   border-radius: 50%;
 }
 .goods h3{
+  width: 267px;
   font-size: 16px;
   order: 2;
+  z-index: 2;
 }
 .ice-cream{
   display: flex;
@@ -195,9 +188,6 @@ li{
   margin-top: -80px;
   margin bottom:-30px;
 }
-.ice-cream .button{
-  align-self: flex-end;
-}
 .ice-cream .button ::before
 {
   content: var(--basic-content);
@@ -208,8 +198,8 @@ li{
   line-height: 60px;
   text-align: center;
 }
-.banner
-{
+.banner{
+  list-style: none;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -219,7 +209,6 @@ li{
   color:#ffffff;
   width: 560px;
   height: 229px;
-  margin: 26px;
   background-image: url(../img/raspberry.jpg);
   border-radius: 16px;
 }
@@ -227,44 +216,78 @@ li{
   color:#ffffff;
   width: 560px;
   height: 229px;
-  margin: 26px;
   background-image: url(../img/chocolate.jpg);
   border-radius: 16px;
 }
-.want-raspberry{
+.raspberry h3{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  padding-left:16px;
+}
+.raspberry p{
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
-  border-radius: 70px;
+  padding-left: 16px;
+}
+.chocolate h3{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  padding-left:16px;
+}
+.chocolate p{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  padding-left: 16px;
+}
+.want-raspberry{
   width: 164px;
-  height: 48px;
+  text-decoration: none;
 }
 .want-chocolate{
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  border-radius: 70px;
   width: 191px;
-  height: 48px;
+  text-decoration: none;
 }
 .advantages{
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   background-image: url(../img/pattern.png);
   font-weight: normal;
+  width: 1146px;
+  height: 306px;
+  border-radius: 16px;
+  border: 2px solid red;
+}
+.advantages p{
+  width: 485px;
+  max-height: 80px ;
+  padding-left: 75px;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 22px;  
+  padding-top: 21px;
+  border: 2px solid red;
+}
+.advantages li{
+  list-style: none;
 }
 .advantages h2{
   width: 995px;
   height: 60px;
   font-size: 24px;
   line-height: 30px;
+  padding-left: 20px;
+  padding-bottom: 0px;
+  border: 2px solid red;
 }
 .first-advantage::before{
   content: "";
@@ -274,17 +297,17 @@ li{
   background-repeat: no-repeat;
   background-position: 0 0;
 }
-.second-advantage ::before{
+.second-advantage::before{
   background-image: url(../img/eco.svg);
   width: 49px; 
   height: 49px; 
 }
-.third-advantage ::before{
+.third-advantage::before{
   background-image: url(../img/cow.svg);
   width: 49px; 
   height: 49px; 
 }
-.fouth-advantage ::before{
+.fouth-advantage::before{
   background-image: url(../img/thermometer.svg);
   width: 49px; 
   height: 49px; 
@@ -308,16 +331,34 @@ li{
   background-image: url(../img/strawberry.png);
 }
 .new-blog h2{
+  padding: 15px;
+  padding-left: 20px;
   font-size: 16px;
+  line-height: 22px;
 }
 .new-blog a{
   color: #323232;
+  padding-left: 20px;
+  width: 287px;
+  height: 77px;
+  font-size: 24px;
+  line-height: 30px;
+}
+.subscription-border{
+  width: 548px;
+  height: 210px;
+  border-radius: 16px;
+  padding: 5px 6px;
+  background-image: url(../img/bg-post.svg);
+  background-size: cover;
+  background-position: top;
 }
 .subscription {
   color: #5A5A5A;
-  width: 560px;
-  height: 220px;
-  margin: 26px;
+  min-width: 548px;
+  min-height: 210px;
+  width: 100%;
+  height: 100%;
   font-size: 16px;
   line-height: 22px;
   background: #F8F7F4;
@@ -347,13 +388,17 @@ li{
 .button {
   font: inherit;
   text-align: center;
-  padding:13px;
+  padding:16px 22px 15px 22px;
   vertical-align: middle;
   text-transform: uppercase;
   background-color: #F26843;
-  border-color: none;
-  border-radius: 25px;
+  border-radius: 70px;
+  border: none;
   color: #ffffff;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
 }
 .button-main
 {
@@ -362,8 +407,9 @@ li{
   font-weight: bold;
   font-size: 32px;
   width: 278px;
-  height: 63px;
+  align-self: flex-end;
   border-radius: 70px;
+  text-decoration: none;
 }
 .button:hover,
 .button:focus,
@@ -383,6 +429,7 @@ footer {
   max-height: 103px;
 }
 .social-button {
+  list-style: none;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -403,7 +450,10 @@ footer {
   font-size: 13px;
   line-height: 18px;
 }
-.heart ::before {
+.info-container li {
+  list-style: none;
+}
+.heart::before {
   background-image: url(../img/heart.svg);
 }
 .map{
@@ -417,6 +467,18 @@ footer {
   height: 306px;
   background-color: #FEFEFE;
   border-radius: 16px;
+}
+.contact p{
+  font-size: 14px;
+ line-height: 20px;
+ padding-left: 25px;
+}
+.contact a,
+.contact address,
+.contact .button{
+  font-size: 18px;
+  line-height: 24px;
+  padding-left: 25px;
 }
 .filters{
   display: flex;
