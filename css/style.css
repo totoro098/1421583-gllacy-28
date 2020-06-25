@@ -334,6 +334,45 @@ img {
   background-position: 0 0;
 }
 
+.entrance:hover::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: 60px;
+  top: 5px;
+  width: 20px;
+  height: 19px;
+  background-image: url("../img/entrance2.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0; 
+}
+
+.loupe:hover::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  right: 0px;
+  top: 0px;
+  width: 20px;
+  height: 19px;
+  background-image: url("../img/loupe2.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0; 
+}
+
+.basket:hover::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: 80px;
+  top: 5px;
+  z-index: 2;
+  width: 21px;
+  height: 20px;
+  background-image: url("../img/basket2.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
 .work-time {
   color: var(--basic-white);
   width: 100%;
@@ -563,12 +602,18 @@ img {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   height: 307px;
   margin-top: 40px;
   margin-bottom: 40px;
   margin-left: 26px;
 }
-.goods-item:hover {
+
+.goods-item:hover::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  display: block;
   width: 293px;
   height: 402px;
   background: var(--basic-white);
@@ -576,6 +621,7 @@ img {
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+
 .goods-item p {
   font-weight: bold;
   font-size: 45px;
@@ -597,11 +643,24 @@ img {
   width: 267px;
   font-size: 16px;
   order: 2;
-  position: relative;
-  top: -120px;
+  position: absolute;
+  top: 250px;
   align-items: center;
   text-align: center;
 }
+
+.button-view {
+  padding: 12px 16px;
+  text-decoration: none;
+  position: absolute ;
+  top: 330px;
+  display: none;
+}
+
+.goods-item:hover .button-view {
+  display: block;
+}
+
 
 .advantages {
   display: flex;
@@ -1262,12 +1321,6 @@ img {
   left: 138px;
 }
 
-.button-view {
-  padding: 12px 16px;
-  text-decoration: none;
-  display: none;
-}
-
 .fat label::before{
   content: "";
   position: absolute;
@@ -1281,7 +1334,7 @@ img {
   background-position: 0 0;
 }
 
-.fat:checked + label::before{
+.fat input[type="radio"]:checked + label::before{
   content: "";
   position: absolute;
   left: 10px;
@@ -1304,7 +1357,7 @@ img {
   background-position: 0 0;
 }
 
-.fat:checked + label::before{
+.fat input[type="radio"]:checked + label::before{
   content: "";
   position: absolute;
   left: 10px;
